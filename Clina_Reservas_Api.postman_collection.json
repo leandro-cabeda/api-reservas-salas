@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "c130f271-0df7-4364-996b-9f329a688581",
+		"name": "Clina_Reservas_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api Raiz",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca uma sala especifica pelo id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0Bob3RtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDUiLCJpYXQiOjE2NDcxNTU1NDEsImV4cCI6MTY0NzE1OTE0MX0.cMEMeIVY8nIKjeVk1bPfmhL1Zncdzb2TbhV1Fuur0TM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/room/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca as reservas agendadas pela sala especifica do id referente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0Bob3RtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDUiLCJpYXQiOjE2NDcxNTU1NDEsImV4cCI6MTY0NzE1OTE0MX0.cMEMeIVY8nIKjeVk1bPfmhL1Zncdzb2TbhV1Fuur0TM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/schedule/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Busca das salas que foram agendadas referente os periodos cadastrados",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0Bob3RtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDUiLCJpYXQiOjE2NDcxNTU1NDEsImV4cCI6MTY0NzE1OTE0MX0.cMEMeIVY8nIKjeVk1bPfmhL1Zncdzb2TbhV1Fuur0TM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/room?date=2021-05-02",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"room"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2021-05-02"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realiza autenticação na Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"leo@hotmail.com\",\r\n    \"senha\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cria um agendamento para uma sala especifica pelo id referente e o periodo escolhido",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0Bob3RtYWlsLmNvbSIsInNlbmhhIjoiMTIzNDUiLCJpYXQiOjE2NDcxNTU1NDEsImV4cCI6MTY0NzE1OTE0MX0.cMEMeIVY8nIKjeVk1bPfmhL1Zncdzb2TbhV1Fuur0TM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"roomId\": 3,\r\n    \"data\": \"2021-05-02\",\r\n    \"periodo\": \"manha\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/schedule",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"schedule"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

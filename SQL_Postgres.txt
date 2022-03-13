@@ -1,0 +1,42 @@
+Inserção dos dados nas tabelas:
+
+insert into enderecos (logradouro, bairro, cidade, estado, pais, cep, numero)
+values ('Rua Itapeva', 'Bela Vista', 'São Paulo', 'SP', 'Brasil', '01332-000', 490);
+
+insert into enderecos (logradouro, bairro, cidade, estado, pais, cep, numero)
+values ('Av. Indianópolis', 'Indianópolis', 'São Paulo', 'SP', 'Brasil', '04063-003', 1675);
+
+insert into enderecos (logradouro, bairro, cidade, estado, pais, cep, numero)
+values ('Barueri Alphaville Centro Industrial e Empresarial/Alphaville', 
+		'Alameda Madeira', 'São Paulo', 'SP', 'Brasil', '06454-010', 258);
+		
+
+
+insert into salas (nome, descricao, enderecoId, imagem)
+values ('Sala Azul', 'Sala ampla, muito funcional, com tudo que você precisa. Ótima janela, com bastante luz natural.',
+	   1, 'https://lh3.googleusercontent.com/aJ3FYURhoo98DF9kwaiVUQPmA-iHy7kzXiQh2ezyyj3EGqU8llS5jvEkBWU7NHriDJstMw=s151');
+	   
+insert into salas (nome, descricao, enderecoId, imagem)
+values ('Sala 2', 'Sala para estética, fisio e demais procedimento. Maca com acesso 360 graus (fica no meio da sala).',
+	   2, 'https://lh3.googleusercontent.com/UdyuYrJOYSj4EJa31C0C77Gi95ej-W8WhdroZxEWPxRm5_i-6DOFh_Tp9uYOBqI_f05EkBU=s151');
+	   
+
+insert into salas (nome, descricao, enderecoId, imagem)
+values ('Sala 3', 'Sala ampla, com móveis de primeira linha. Ideal para clínica e pequenos procedimentos.',
+	   3, 'https://lh3.googleusercontent.com/Z6pf8r1zT5WhGTEXvZgjKIAeOGwAkEyBMRpIq78yp7FVNFSHul4TEw6CLLhzrH_0LWqMXg=s151');
+	   
+ 
+	   
+insert into usuarios (nome, email, senha, avatar)
+values('Leo', 'leo@hotmail.com', '12345', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDKFmIAeGGdc5Sudv7nTDy6S1_fhcJ8lvlHw&usqp=CAU');
+
+
+insert into usuarios (nome, email, senha, avatar)
+values('José', 'jose@hotmail.com', '123456', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlkkVgVU-NYE2C5Di1RojXp_eEBoCUeGqWKQ&usqp=CAU');
+
+
+insert into usuarios (nome, email, senha, avatar)
+values('Fernanda', 'fernanda@hotmail.com', '1234567', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlVevFRkg5j2RFPWB0pjeL7Bjnryjb9QRRjQ&usqp=CAU');
+
+
+
